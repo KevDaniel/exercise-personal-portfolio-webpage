@@ -1,0 +1,202 @@
+:root {
+    --principal-background: white;
+    --secondary-background: gray;
+    --color-navbar-background: black;
+    --color-principal-text: #F1F0F2;
+    --navbar-text-color: #D5D2D9;
+    --project-tittle-color: black;
+    --color-text-a-project: black;
+    --color-footer-text: black;
+}
+@media (max-width:400px) {
+    body {
+        background-color: var(--principal-background);
+    }
+}
+* {
+    font-family: 'Roboto', sans-serif, Inter;
+    color: var(-color-principal-text);
+}
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--principal-background);
+    color: var(-color-principal-text);
+}
+h1, h2 {
+    color: var(--color-principal-text);
+}
+/*Navbar code*/
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 100px 100px 100px;
+    z-index: 1000;
+    background-color: var(--color-navbar-background);
+    color: var(--navbar-text-color);
+}
+#navbar a{
+    text-decoration: none;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 15px;
+    width: 90px;
+    color: var(--navbar-text-color);
+    background-color: transparent;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+#navbar a:hover {
+    background-color: var(--navbar-text-color);
+    color: var(--color-navbar-background);
+}
+#navbar h1 {
+    margin: auto;
+    text-align: center;
+    color: var(--navbar-text-color);
+}
+/*Welcome section code*/
+.welcome-container {
+    padding-top: 100px;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 60;
+    background-color: var(--secondary-background);
+}
+.welcome-container h1, h2{
+    text-align: center;
+}
+/*Projects section code*/
+#projects {
+    width: 100%;
+    height: auto;
+}
+.projects-class {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+}
+.project-component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0%;
+    margin-top: 0px;
+    width: 90%;
+    height: 95%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.project-component img {
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+}
+.project-component a {
+    text-align: center;
+    text-decoration: none;
+    font-size: small;
+    color: var(--color-text-a-project);
+    background-color: white;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.project-component a:hover{
+    color: white;
+    background-color: var(--color-text-a-project);
+}
+.project-title {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    color: var(--project-tittle-color);
+}
+.button-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.show-all-button {
+    height: auto;
+    width: auto;
+    border-radius: 20px;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: white;
+}
+.show-all-button a {
+    text-decoration: none;
+    color: var(--color-text-a-project);
+    font-size: 16px;
+}
+.show-all-button:hover {
+    background-color: gray;
+}
+
+/*Profile links section code*/
+#profile-links {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--secondary-background);
+}
+.social-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+#profile-links a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#profile-links img {
+    height: 40px;
+}
+/*Footer section code*/
+footer {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: var(--color-footer-text);
+}
